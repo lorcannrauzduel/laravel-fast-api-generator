@@ -5,6 +5,8 @@
   - Node v10.19
   - Composer v1.6
 
+Build better API’s faster with PHP and Laravel 5.7, Fast API Generator is a starter project, designed to help you build scalable API’s faster.
+
 ### Installation
 
 Install the dependencies and devDependencies and start the server.
