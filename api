@@ -1,0 +1,13 @@
+#!/bin/bash
+echo 'Table Name?'
+read table
+php artisan make:migration create_${table}_table --create=${table}
+
+echo 'Define your table and tap ENTER'
+read ok
+php artisan migrate
+
+echo 'Model Name?'
+read model
+php artisan krlove:generate:model ${model} --table-name=${table}
+php artisan make:api --model=${model}
