@@ -54,7 +54,8 @@ Or you can do it manually
 
 1) Create a migration:
 ```sh
-$ php artisan make:migration create_users_table --create=users
+$ php artisan make:migration create_modeles_table --create=modeles
+$ 'Created Migration: 2020_03_31_232937_create_modeles_table'
 ```
 
 2) Define table :
@@ -73,16 +74,21 @@ Schema::create('modeles', function (Blueprint $table) {
 3) Run migration
 ```sh
 $ php artisan migrate
+$ 'Migrating: 2020_03_31_232937_create_modeles_table'
+$ 'Migrated:  2020_03_31_232937_create_modeles_table'
 ```
 
 3) Create Model from the table
 ```sh
 $ php artisan krlove:generate:model Modele --table-name=modeles
+$ 'Model Modele generated'
 ```
 
 4) Creating API controller and route
 ```sh
 $ php artisan make:api --model=Modele
+$ 'Created API controller.'
+$ 'Created API route.'
 
 
 localhost:8000/api/modeles
