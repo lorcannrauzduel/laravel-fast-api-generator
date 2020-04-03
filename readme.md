@@ -65,7 +65,7 @@ Your API is now ready. All routes are available on routes/api.php
 3) Or run ./generate entity if to generate it one by one.
 
 ```sh
-$ ./generate entity
+$ './generate entity'
 $ 'Table Name?'
 $ 'articles'
 $ 'Created Migration: 2020_03_31_232937_create_articles_table'
@@ -122,13 +122,13 @@ $ 'Migrating: 2020_03_31_232937_create_modeles_table'
 $ 'Migrated:  2020_03_31_232937_create_modeles_table'
 ```
 
-Create Model from the table
+Generate Model from the table
 ```sh
 $ php artisan krlove:generate:model Modele --table-name=modeles
 $ 'Model Modele generated'
 ```
 
-Creating API controller and route
+Generate API controller and route
 ```sh
 $ php artisan make:api --model=Modele
 $ 'Created API controller.'
