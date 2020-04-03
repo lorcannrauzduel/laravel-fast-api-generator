@@ -31,7 +31,7 @@ $ php artisan serve
 
 ```sh
 $ ./generate all
-$ 'Import your database and tap ENTER you are ready'
+$ 'Import your database and tap ENTER when you are ready'
 $ 'Using connection: mysql'
 $ 'Generating migrations for: articles, articles_has_comments, comments, users'
 $ 'Do you want to log these migrations in the migrations table? [Y/n] :'

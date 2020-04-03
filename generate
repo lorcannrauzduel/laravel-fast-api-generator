@@ -1,6 +1,6 @@
 #!/bin/bash
 if [[ $1 == 'all' ]]; then
-echo 'Import your database and tap ENTER you are ready.'
+echo 'Import your database and tap ENTER when you are ready.'
 read enter
 if [[ $key = "" ]]; then 
 php artisan migrate:generate
