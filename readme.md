@@ -7,7 +7,9 @@
 
 ### Installation
 
-Install the dependencies and devDependencies and start the server.
+1) git clone https://github.com/lorcannrauzduel/laravel-fast-api-generator.git
+2) Create a .env
+3) Install the dependencies and devDependencies and start the server.
 
 ```sh
 $ cd  laravel-fast-api-generator
