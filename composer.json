@@ -12,7 +12,6 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
-        "laraveldaily/apigenerator": "^0.1.9",
         "reliese/laravel": "^0.0.14"
     },
     "require-dev": {

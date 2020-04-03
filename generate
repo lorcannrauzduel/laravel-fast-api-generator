@@ -15,6 +15,7 @@ search_dir='app'
         sudo php artisan make:api --model=${name}
         fi
     done
+    echo 'Your API is ready.'
 fi
 elif [[ $1 == 'entity' ]]; then
 echo 'Table Name?'
