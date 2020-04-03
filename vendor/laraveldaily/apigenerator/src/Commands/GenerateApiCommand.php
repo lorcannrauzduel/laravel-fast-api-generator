@@ -24,7 +24,7 @@ class GenerateApiCommand extends Command
 
     public function handle()
     {
-        $folder = trim($this->ask('Models folder', 'app'), '/');
+        //$folder = trim($this->ask('Models folder', 'app'), '/');
         $model = ucfirst($this->option('model'));
 
         if (!file_exists($modelPath = base_path("$folder/$model.php"))) {
@@ -39,22 +39,22 @@ class GenerateApiCommand extends Command
             //override?
             if ($this->confirm('Controller exists. Do you wish to override?')) {
                 if ($controller->create()) {
-                    $this->info('Created API controller.');
+                    $this->info('Created API '.$model.' controller.');
                 } else {
-                    $this->error('Couldn\'t create the controller.');
+                    $this->error('Couldn\'t create '.$model.' controller.');
                 }
             }
         } else {
             $controller->create();
-            $this->info('Created API controller.');
+            $this->info('Created API '.$model.' controller.');
         }
 
         $route = new ApiRouteGenerator();
         if (!$route->resource(str_plural($model))) {
             $route->generate();
-            $this->info('Created API route.');
+            $this->info('Created '.$model.' API route.');
         } else {
-            $this->info('API route already exists.');
+            $this->info($model.' API route already exists.');
         }
     }
 }
