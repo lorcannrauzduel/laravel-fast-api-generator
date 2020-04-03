@@ -5,8 +5,6 @@
   - Node v10.19
   - Composer v1.6
 
-Build better API’s faster with PHP and Laravel 5.7, Fast API Generator is a starter project, designed to help you build scalable API’s faster.
-
 ### Installation
 
 Install the dependencies and devDependencies and start the server.
@@ -18,12 +16,55 @@ $ npm install -d
 $ php artisan serve
 ```
 
-### Documentation
+### Commands
 
-Run ./api on project root folder
+1) Import your database into your server
+2) Setup your database config
+3) Run ./generate all to generate all :
+- Migrations
+- Tables
+- Index Migrations
+- Foreign Keys
+- Models
+- Controllers
+- API Routes 
 
 ```sh
-$ ./api
+$ ./generate all
+$ 'Import your database and tap ENTER you are ready'
+$ 'Using connection: mysql'
+$ 'Generating migrations for: articles, articles_has_comments, comments, users'
+$ 'Do you want to log these migrations in the migrations table? [Y/n] :'
+$ '> Y'
+$ 'Migration table created successfully.'
+£ 'Next Batch Number is: 1. We recommend using Batch Number 0 so that it becomes the "first" migration [Default: 0] :'
+$ '> 0'
+$ 'Setting up Tables and Index Migrations'
+$ 'Created: /home/lorcann/Documents/My-Projects/fast-api-builder/database/migrations/2020_04_03_195738_create_articles_table.php'
+$ 'Created: /home/lorcann/Documents/My-Projects/fast-api-builder/database/migrations/2020_04_03_195738_create_articles_has_comments_table.php'
+$ 'Created: /home/lorcann/Documents/My-Projects/fast-api-builder/database/migrations/2020_04_03_195738_create_comments_table.php'
+$ 'Created: /home/lorcann/Documents/My-Projects/fast-api-builder/database/migrations/2020_04_03_195738_create_users_table.php'
+$ 'Setting up Foreign Key Migrations'
+$ 'Created: /home/lorcann/Documents/My-Projects/fast-api-builder/database/migrations/2020_04_03_195739_add_foreign_keys_to_articles_table.php'
+$ 'Created: /home/lorcann/Documents/My-Projects/fast-api-builder/database/migrations/2020_04_03_195739_add_foreign_keys_to_articles_has_comments_table.php'
+$'Finished!'
+$ 'Check out your models for mydb' 
+$ 'Created API Article controller.'
+$ 'Created API Article route.'
+$ 'Created API ArticlesHasComment controller.'
+$ 'Created API ArticlesHasComment route.'
+$ 'Created API Comment controller.'
+$ 'Created API Comment route.'
+$ 'Created API User controller.'
+$ 'Created API User route.'
+
+Your API is now ready. All routes are available on routes/api.php
+```
+
+3) Or run ./generate entity if your database is not ready, to generate it one by one.
+
+```sh
+$ ./generate entity
 $ 'Table Name?'
 $ 'articles'
 $ 'Created Migration: 2020_03_31_232937_create_articles_table'
@@ -51,16 +92,16 @@ $ 'Created API route.'
 localhost:8000/api/articles
 ```
 
-Or you can do it manually
+3) Or you can do it manually
 
 
-1) Create a migration:
+Create a migration:
 ```sh
 $ php artisan make:migration create_modeles_table --create=modeles
 $ 'Created Migration: 2020_03_31_232937_create_modeles_table'
 ```
 
-2) Define table :
+Define your table
 ```sh
 Schema::create('modeles', function (Blueprint $table) {
     $table->bigIncrements('id');
@@ -73,20 +114,20 @@ Schema::create('modeles', function (Blueprint $table) {
 });
 ```
 
-3) Run migration
+Run migration
 ```sh
 $ php artisan migrate
 $ 'Migrating: 2020_03_31_232937_create_modeles_table'
 $ 'Migrated:  2020_03_31_232937_create_modeles_table'
 ```
 
-3) Create Model from the table
+Create Model from the table
 ```sh
 $ php artisan krlove:generate:model Modele --table-name=modeles
 $ 'Model Modele generated'
 ```
 
-4) Creating API controller and route
+Creating API controller and route
 ```sh
 $ php artisan make:api --model=Modele
 $ 'Created API controller.'
@@ -137,9 +178,11 @@ localhost:8000/api/modeles
 
 ### Laravel Package
 
- - APIGenerator (https://github.com/LaravelDaily/api-generator)
+ - Migrations Generator (https://github.com/Xethron/migrations-generator)
  - Eloquent Model Generator (https://github.com/krlove/eloquent-model-generator)
  - Reliese (https://github.com/reliese/laravel)
+ - APIGenerator (https://github.com/LaravelDaily/api-generator)
+
 
 
 
