@@ -1,0 +1,32 @@
+#!/bin/bash
+if [[ $1 == 'all' ]]; then
+echo 'Import your database and tap ENTER you are ready.'
+read enter
+if [[ $key = "" ]]; then 
+php artisan migrate:generate
+php artisan code:models
+search_dir='app'
+    for entry in "$search_dir"/*
+    do
+        t=$(basename "$entry")
+        name=$(echo "$entry" | sed -e 's/\.[^.]*$//')
+        name=$(echo "$t" | sed -e 's/\.[^.]*$//')
+        if [[ "$name" != "Console" && "$name" != "Exceptions" && "$name" != "Http" && "$name" != "Providers"  ]]; then
+        sudo php artisan make:api --model=${name}
+        fi
+    done
+fi
+elif [[ $1 == 'entity' ]]; then
+echo 'Table Name?'
+read table
+php artisan make:migration create_${table}_table --create=${table}
+
+echo 'Define your table and tap ENTER'
+read ok
+php artisan migrate
+
+echo 'Model Name?'
+read model
+php artisan krlove:generate:model ${model} --table-name=${table}
+php artisan make:api --model=${model}
+fi

@@ -163,6 +163,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Laraveldaily\Apigenerator\ApiGeneratorProvider::class,
         Krlove\EloquentModelGenerator\Provider\GeneratorServiceProvider::class,
+        Reliese\Coders\CodersServiceProvider::class,
 
         /*
          * Package Service Providers...

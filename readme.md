@@ -137,6 +137,7 @@ localhost:8000/api/modeles
 
  - APIGenerator (https://github.com/LaravelDaily/api-generator)
  - Eloquent Model Generator (https://github.com/krlove/eloquent-model-generator)
+ - Reliese (https://github.com/reliese/laravel)
 
 
 
