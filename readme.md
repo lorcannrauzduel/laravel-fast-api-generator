@@ -27,10 +27,11 @@ $ php artisan serve
 - Foreign Keys
 - Models
 - Controllers
-- API Routes 
+- API Routes
 
+From your database. Make you sure your database is well built.
 ```sh
-$ ./generate all
+$ './generate all'
 $ 'Import your database and tap ENTER when you are ready'
 $ 'Using connection: mysql'
 $ 'Generating migrations for: articles, articles_has_comments, comments, users'
@@ -47,7 +48,7 @@ $ 'Created: /home/lorcann/Documents/My-Projects/fast-api-builder/database/migrat
 $ 'Setting up Foreign Key Migrations'
 $ 'Created: /home/lorcann/Documents/My-Projects/fast-api-builder/database/migrations/2020_04_03_195739_add_foreign_keys_to_articles_table.php'
 $ 'Created: /home/lorcann/Documents/My-Projects/fast-api-builder/database/migrations/2020_04_03_195739_add_foreign_keys_to_articles_has_comments_table.php'
-$'Finished!'
+$ 'Finished!'
 $ 'Check out your models for mydb' 
 $ 'Created API Article controller.'
 $ 'Created API Article route.'
@@ -61,7 +62,7 @@ $ 'Created API User route.'
 Your API is now ready. All routes are available on routes/api.php
 ```
 
-3) Or run ./generate entity if your database is not ready, to generate it one by one.
+3) Or run ./generate entity if to generate it one by one.
 
 ```sh
 $ ./generate entity
@@ -136,7 +137,6 @@ $ 'Created API route.'
 
 localhost:8000/api/modeles
 ```
-
 
 ### Table Builder
 
