@@ -4,21 +4,27 @@
   - PHP 7.4
   - Node v10.19
   - Composer v1.6
+ 
+Youtube Video [here](https://www.youtube.com/watch?v=IlpcQ_q-TDk) (1min)
 
 ### Installation
 
-1) git clone https://github.com/lorcannrauzduel/laravel-fast-api-generator.git
+1) Clone the repository https://github.com/lorcannrauzduel/laravel-fast-api-generator.git
 2) Create a .env
 3) Install the dependencies and devDependencies and start the server.
+4) Move GenerateApiCommand.php file in vendor/laraveldaily/apigenerator/src/Commands
 
 ```sh
 $ cd  laravel-fast-api-generator
 $ composer install
-$ npm install -d
+$ npm install
 $ php artisan serve
 ```
 
 ### Commands
+
+
+![Alt Text](https://media.giphy.com/media/ekGroaLbzgE3QroJOX/giphy.gif)
 
 1) Import your database into your server
 2) Setup your database config
@@ -31,7 +37,7 @@ $ php artisan serve
 - Controllers
 - API Routes
 
-From your database. Make you sure your database is well built.
+Make you sure your database is well built.
 ```sh
 $ './generate all'
 $ 'Import your database and tap ENTER when you are ready'
@@ -184,6 +190,9 @@ localhost:8000/api/modeles
  - Eloquent Model Generator (https://github.com/krlove/eloquent-model-generator)
  - Reliese (https://github.com/reliese/laravel)
  - APIGenerator (https://github.com/LaravelDaily/api-generator)
+ - 
+ ### Author
+Lorcann Rauzduel
 
 
 
