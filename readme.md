@@ -29,12 +29,11 @@ $ php artisan serve
 1) Import your database into your server
 2) Setup your database config
 3) Run ./generate all to generate all :
-- Migrations
-- Tables
-- Index Migrations
+- Migrations Tables
 - Foreign Keys
 - Models
-- Controllers
+- Controllers 
+- CRUD
 - API Routes
 
 Make you sure your database is well built.
