@@ -11,14 +11,13 @@ Youtube Video [here](https://www.youtube.com/watch?v=IlpcQ_q-TDk) (1min)
 
 1) Clone the repository https://github.com/lorcannrauzduel/laravel-fast-api-generator.git
 2) Create a .env
-3) Install the dependencies and devDependencies and start the server.
+3) Install the dependencies and devDependencies.
 4) Move GenerateApiCommand.php file in vendor/laraveldaily/apigenerator/src/Commands
 
 ```sh
 $ cd  laravel-fast-api-generator
 $ composer install
 $ npm install
-$ php artisan serve
 ```
 
 ### Commands
